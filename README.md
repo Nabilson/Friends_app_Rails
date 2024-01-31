@@ -1,4 +1,6 @@
-# README
+# Friend_app
+
+Hello, my name is Nabil and I work with Waaku. Follow me @ xxx.com.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
