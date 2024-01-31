@@ -1,0 +1,52 @@
+
+
+<% if user_signed_in? %>
+
+<h1>Friends</h1>
+
+<table class="table table-striped">  
+<thead class = 'thead-dark'>
+    <tr>
+      <th scope="col">Name</th>
+      <!-- <th scope="col">Last</th> -->
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Twitter</th>
+    <!--  <th scope="col">User Id</th> -->
+      <th colspan= "1"></th>
+    </tr>
+</thead>
+<tbody>
+    <% @friends.each do |friend| %>
+
+    <% if friend.user == current_user %>
+
+    <tr>
+      <td><%= link_to friend.f_name + " " + friend.l_name, friend  %> </td>
+      
+      <td><%= friend.email %></td>
+      <td><%= friend.phone %></td>
+      <td><%= friend.twitter %></td>
+    <!--  <td><%= friend.user_id %></td> -->
+
+      <td><%= button_to "Delete", friend, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn-small btn-outline-danger"  %></td>
+
+    </tr>
+    <% end %>
+
+  <% end %>
+</tbody>
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+<%= link_to "New friend", new_friend_path, class: "btn btn-secondary" %>
+<% end %>
+
+<% else%>
+
+<h1>Hello World!</h1>
+This is my first Rails Webpage... 
+
+<% end %>
