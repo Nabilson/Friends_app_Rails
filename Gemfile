@@ -5,7 +5,7 @@ ruby "3.1.2"
 
 gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
-#gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4"
 #gem 'pg', '~> 1.5', '>= 1.5.4'
 gem "puma", "~> 5.0"
 gem "importmap-rails"
@@ -43,8 +43,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  #gem "sqlite3", "~> 1.4"
-  gem 'pg', '~> 1.5', '>= 1.5.4'  
+  gem "sqlite3", "~> 1.4"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
