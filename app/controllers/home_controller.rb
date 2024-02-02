@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
 
   def about
-    @about_me = "My Name is John" # Instance variable
+    @about_me = "My Name is John" 
   end
   
 end
